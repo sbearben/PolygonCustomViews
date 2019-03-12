@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PieChart">
+        <attr name="showText" format="boolean" />
+        <attr name="labelPosition" format="enum" >
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PolygonPicker">
+        <attr name="minSides" format="integer"/>
+        <attr name="maxSides" format="integer"/>
+        <attr name="polygonColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitledSeekBar">
+        <attr name="title" format="string"/>
+        <attr name="showTitle" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

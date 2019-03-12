@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/marker_background"
+        android:drawable="@drawable/marker_background" />
+
+    <item
+        android:id="@+id/marker_foreground"
+        android:drawable="@drawable/ic_marker_symbol_black_24dp" />
+
+</layer-list>

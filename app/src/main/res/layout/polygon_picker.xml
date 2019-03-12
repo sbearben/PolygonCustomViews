@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <uk.co.victoriajanedavis.polygoncustomviews.polygonPicker.PolygonView
+        android:id="@+id/polygonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"/>
+
+    <uk.co.victoriajanedavis.polygoncustomviews.polygonPicker.TitledSeekBar
+        android:id="@+id/sidesTitledSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/polygonView"
+        app:title="Sides"/>
+
+    <uk.co.victoriajanedavis.polygoncustomviews.polygonPicker.TitledSeekBar
+        android:id="@+id/roundingTitledSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sidesTitledSeekBar"
+        android:layout_marginTop="24dp"
+        app:title="Courner Rounding"/>
+
+    <uk.co.victoriajanedavis.polygoncustomviews.polygonPicker.TitledSeekBar
+        android:id="@+id/traceTitledSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roundingTitledSeekBar"
+        android:layout_marginTop="24dp"
+        app:title="Progress"/>
+
+</merge>
