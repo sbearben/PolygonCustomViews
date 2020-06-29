@@ -3,9 +3,13 @@ package uk.co.victoriajanedavis.polygoncustomviews.polygonPicker
 import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.widget.RelativeLayout
 import android.widget.SeekBar
+import com.facebook.react.ReactRootView
 import kotlinx.android.synthetic.main.polygon_picker.view.*
+import uk.co.victoriajanedavis.polygoncustomviews.MainActivity
+import uk.co.victoriajanedavis.polygoncustomviews.PolygonCustomViewsApp
 import uk.co.victoriajanedavis.polygoncustomviews.R
 
 class PolygonPicker : RelativeLayout {
@@ -48,6 +52,22 @@ class PolygonPicker : RelativeLayout {
         sidesTitledSeekBar.setOnSeekBarChangeListener(sidesSeekBarChangeListener)
         roundingTitledSeekBar.setOnSeekBarChangeListener(roundingSeekBarChangeListener)
         traceTitledSeekBar.setOnSeekBarChangeListener(traceSeekBarChangeListener)
+
+        val reactView = ReactRootView(context)
+        (context as MainActivity)?.let {
+            reactView.startReactApplication(it.instanceManager, "Widget")
+        }
+        addView(reactView)
+
+        /*
+        val reactView = ReactRootView(context)
+        (context.application as PolygonCustomViewsApp).let {
+            Log.d("PolygonRNRootView", "mainActivity is in scope")
+            reactView.startReactApplication(it.mReactNativeHost.reactInstanceManager, "Widget")
+        }
+        Log.d("PolygonRNRootView", "trying to add root view")
+        addView(reactView)
+        */
     }
 
     private val sidesSeekBarChangeListener by lazy {
